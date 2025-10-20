@@ -6,7 +6,7 @@
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:38:57 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/20 19:54:22 by tamamart         ###   ########.fr       */
+/*   Updated: 2025/10/20 20:06:09 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ int	ft_putnbr(int nb)
 	if (nb > 9)
 		count += ft_putnbr(nb / 10);
 	c = (nb % 10) + '0';
-	write(1, &c, 5);
+	write(1, &c, 1);
 	count++;
 	return (count);
 }
