@@ -6,7 +6,7 @@
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:39:07 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/20 18:14:21 by tamamart         ###   ########.fr       */
+/*   Updated: 2025/10/20 19:57:33 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,12 @@ int	ft_printf(char const *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			count+=ft_format(format[i], args);
+			count += ft_format(format[i], args);
 		}
 		else
 		{
-			count+=ft_putchar(format[i]);
-		}			
+			count += ft_putchar(format[i]);
+		}
 		i++;
 	}
 	return (count);

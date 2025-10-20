@@ -10,8 +10,7 @@ int	main(void)
 
 	name = 'M';
 	age = 36;
-	len = ft_printf("Hola soy %c y tengo %d años.", name, age);
-	printf("Longitud: %d", len);
-	ft_printf("Hola soy %c y tengo %d años.", 'm', 40);
+	len = ft_printf("Hola soy %c y tengo %d años.", name, 36);
+	ft_printf("\nLongitud: %d", len);
 	return (0);
 }
