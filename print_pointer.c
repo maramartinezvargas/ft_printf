@@ -6,7 +6,8 @@
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:38:53 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/19 21:38:53 by tamamart         ###   ########.fr       */
+/*   Updated: 2025/10/21 13:04:29 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libftprintf.h"

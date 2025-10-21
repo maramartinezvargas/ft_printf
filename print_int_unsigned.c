@@ -6,11 +6,11 @@
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:38:57 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/20 20:06:09 by tamamart         ###   ########.fr       */
+/*   Updated: 2025/10/21 12:48:43 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 int	ft_putnbr(int nb)
 {

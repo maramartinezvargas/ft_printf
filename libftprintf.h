@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/21 13:04:54 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/21 13:13:13 by tamamart         ###   ########.fr       */
+/*   Created: 2025/10/19 21:27:19 by tamamart          #+#    #+#             */
+/*   Updated: 2025/10/21 12:50:55 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include "libftprintf.h"
+#ifndef LIBFTPRINTF_H
+# define LIBFTPRINTF_H
 
-int	main(void)
-{
-	char	*name;
-	int		age;
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdarg.h>
 
-	name = "Mara";
-	age = 36;
-	ft_printf("\nHola soy %s y tengo %d años.", name, age);
-	printf("\nHola soy %s y tengo %d años.", name, age);
-	return (0);
-}
+int		ft_printf(char const *format, ...);
+int		ft_format(char character, va_list args);
+int		ft_putchar(char c);
+int		ft_putnbr(int c);
+int		ft_putstr(char *s);
+
+#endif

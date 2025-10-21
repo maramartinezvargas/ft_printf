@@ -6,11 +6,11 @@
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:39:09 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/20 21:20:54 by tamamart         ###   ########.fr       */
+/*   Updated: 2025/10/21 12:48:52 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libftprintf.h"
 
 int	ft_format(char character, va_list args)
 {
