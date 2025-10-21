@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/19 21:39:07 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/21 12:49:19 by tamamart         ###   ########.fr       */
+/*   Created: 2025/10/21 18:06:02 by tamamart          #+#    #+#             */
+/*   Updated: 2025/10/21 18:06:07 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(char const *format, ...)
 {
