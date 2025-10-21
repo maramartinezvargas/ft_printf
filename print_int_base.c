@@ -6,7 +6,7 @@
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:38:57 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/21 18:04:33 by tamamart         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:14:23 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ int	ft_putnbr(int nb)
 	return (count);
 }
 
-int	ft_putnbr_base(unsigned int nb, char *base, int len)
+int	ft_putnbr_base(unsigned long nb, char *base, int len)
 {
 	int	count;
 

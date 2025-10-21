@@ -6,7 +6,7 @@
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:39:09 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/21 18:04:17 by tamamart         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:16:46 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int	ft_format(char character, va_list args)
 {
+	if (character == '%')
+		return (ft_putchar('%'));
 	if (character == 'c')
 		return (ft_putchar(va_arg(args, int)));
 	if (character == 'd' || character == 'i')
