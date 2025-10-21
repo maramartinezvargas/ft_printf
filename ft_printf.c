@@ -6,7 +6,7 @@
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 18:06:02 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/21 18:06:07 by tamamart         ###   ########.fr       */
+/*   Updated: 2025/10/21 19:48:41 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,11 @@ int	ft_printf(char const *format, ...)
 	size_t	i;
 	int		count;
 
+	if (!format)
+		return (0);
+	va_start(args, format);
 	i = 0;
 	count = 0;
-	va_start(args, format);
 	while (format[i])
 	{
 		if (format[i] == '%' && format[i + 1] != '\0')
@@ -34,5 +36,6 @@ int	ft_printf(char const *format, ...)
 		}
 		i++;
 	}
+	va_end(args);
 	return (count);
 }

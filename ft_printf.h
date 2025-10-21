@@ -6,7 +6,7 @@
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:27:19 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/21 18:14:11 by tamamart         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:49:58 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int		ft_putchar(char c);
 int		ft_putnbr(int c);
 int		ft_putstr(char *s);
 int		ft_putnbr_base(unsigned long nb, char *base, int len);
+int		ft_putptr(char *p);
 int		ft_strlen(char *str);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: tamamart <tamamart@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 21:39:09 by tamamart          #+#    #+#             */
-/*   Updated: 2025/10/21 18:16:46 by tamamart         ###   ########.fr       */
+/*   Updated: 2025/10/21 18:50:13 by tamamart         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,7 @@ int	ft_format(char character, va_list args)
 	if (character == 'X')
 		return (ft_putnbr_base(va_arg(args, unsigned int),
 				"0123456789ABCDEF", 16));
+	if (character == 'p')
+		return (ft_putptr(va_arg(args, char *)));
 	return (0);
 }
