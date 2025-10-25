@@ -57,10 +57,59 @@ gcc -Wall -Wextra -Werror main.c libftprintf.a
 
 ## 🧠 Detalles técnicos
 
-* Maneja correctamente punteros y valores nulos (`(nil)` y `(null)`).
+* Para replicar printf es necesario entender funciones variádicas.
+* Se debe usar stdarg.h con va_list, va_start, va_arg y va_end.
+* Maneja correctamente punteros y valores nulos ((nil) y (null)).
 * No utiliza funciones prohibidas por la Norminette.
-* Cumple con las flags: `-Wall -Wextra -Werror`.
-* Es totalmente independiente de `printf(3)`.
+* Cumple con las flags: -Wall -Wextra -Werror.
+* Es totalmente independiente de printf(3).
+
+---
+
+## 🔹 Funciones variádicas (breve explicación)
+
+Las funciones variádicas permiten que una función reciba un número indeterminado de argumentos, y printf es una función variádica, por lo que entender cómo funcionan internamente es la clave de este proyecto.
+
+En C, se usan principalmente con `stdarg.h`:
+
+- `va_list args;` → Define la lista de argumentos variables.
+- `va_start(args, last_fixed_arg);` → Inicializa la lista usando el último argumento fijo.
+- `va_arg(args, type);` → Obtiene el siguiente argumento de tipo `type`.
+- `va_end(args);` → Finaliza la lista y libera recursos.
+
+En `ft_printf`, se emplean para iterar sobre los argumentos que se pasan según los especificadores de formato (`%s`, `%d`, `%p`, etc.).
+
+---
+
+## 🔹 Flujo de implementación de ft_printf
+
+El flujo de implementación de ft_printf en realidad es sencillo (¡divide y vencerás!).  
+Podrás reutilizar funciones de tu [libft](https://github.com/maramartinezvargas/libft) propia que ya hiciste, adaptándolas un poco, ya que ft_printf debe devolver el número de caracteres impresos.  
+Bien, el flujo que se ha implementado en mi proyecto es el siguiente:
+
+1. **Recibir el formato y argumentos variables**  
+   - Declarar `va_list args;` y usar `va_start(args, format);`.
+
+2. **Recorrer la cadena de formato**  
+   - Iterar carácter por carácter.
+   - Si el carácter es `%`, procesar el siguiente como especificador de formato.
+
+3. **Delegar al manejador de formatos**  
+   - Crear función `ft_format(char c, va_list args)` para cada especificador (`%s`, `%d`, `%p`, etc.).
+   - Llamar a la función correspondiente para imprimir el valor.
+
+4. **Imprimir caracteres literales**  
+   - Si no es `%`, imprimir directamente usando `ft_putchar`.
+
+5. **Contar caracteres impresos**  
+   - Cada función de impresión devuelve el número de caracteres escritos.
+   - Sumar al contador total.
+
+6. **Finalizar la lista de argumentos**  
+   - Llamar a `va_end(args)` para limpiar recursos.
+
+7. **Devolver el total de caracteres impresos**  
+   - `ft_printf` devuelve este valor como `printf` estándar.
 
 ---
 
